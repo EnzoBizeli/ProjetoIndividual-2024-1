@@ -27,12 +27,12 @@
             <h1 class="titulo">Clippers Corner</h1>
             <ul class="navbar">
                 <li>
-                    <a href="index.html">Inicial</a>
+                    <a href="index.html">Home</a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="simulador.html">Simulador</a>
                 </li>
-                <li>|</li>
+                <li>|</li>-->
                 <li class="agora">
                     <a href="#">Login</a>
                 </li>
@@ -97,7 +97,10 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preenche todos os campos!";
+            setTimeout(()=>{
+          cardErro.style.display = "none";
+        }, 5000);
             finalizarAguardar();
             return false;
         }
