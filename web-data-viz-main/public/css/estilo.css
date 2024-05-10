@@ -32,7 +32,7 @@ body {
   height: var(--tamanho-header);
   border-bottom: 5px solid #bd0404;
   background-color: black;
-  height: 80px;
+  height: 90px;
 }
 
 .header .container {
@@ -54,20 +54,17 @@ body {
 
 .agora {
   font-weight: 500;
-  text-shadow: 1px 1px rgba(248, 140, 140, 0.623);
+  text-shadow: 1px 1px rgba(254, 0, 0, 0.444);
 }
 
 .navbar {
   width: 300px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   list-style: none;
 }
 
 .titulo {
-  color: #32b9cd;
-  width: 1000px;
   font-weight: 700;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
   font-style: italic;
@@ -76,7 +73,7 @@ body {
 
 .header h1 {
   margin: 0;
-  margin-right: 850px;
+  margin-right: 800px;
 }
 
 
@@ -113,17 +110,14 @@ body {
   height: 40px;
   width: 180px;
   background-color: rgb(218, 0, 0);
-  color: white;
   font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 5px;
   margin-left: 12px;
   position: absolute;
   left: 88px;
-  top: 435px;
-  /* bottom: 50px; */
+  top: 465px;
 }
 
 
@@ -183,7 +177,7 @@ body {
 .footer {
   background-color: #011f5f;
   border-top: 5px solid #00277c;
-  height: 100px;
+  height: 80px;
   color: #fff;
   display: flex;
   font-size: 15px;
@@ -225,13 +219,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: #000099;
+  color: #bd0404;
   flex-direction: column;
   height: fit-content;
   padding: 20px 0;
-  margin-top: 140px;
-  margin-left: 440px;
-  box-shadow: 1px 2px 1px 0.5px rgba(0, 0, 255, 0.445);
+  margin-top: 68px;
+  margin-left: 370px;
+  box-shadow: 1px 1px 1px 0.5px #bd0404;
 }
 
 .card {
@@ -241,11 +235,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: #000099;
+  color: #bd0404;
   flex-direction: column;
   height: fit-content;
   padding: 40px 0px;
-  box-shadow: 1px 2px 1px 0.5px rgba(0, 0, 255, 0.445);
+  box-shadow: 1px 1px 1px 0.5px #bd0404;
 }
 
 .card h2 {
@@ -267,14 +261,14 @@ body {
 }
 
 .formulario input {
-  border: 2px solid #0000c2;
+  border: 2px solid #bd0404;
   text-align: center;
   border-radius: 10px;
   margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #0000c2;
+  border: 2px solid #bd0404;
   background-color: white;
   color: gray;
   height: 36px;
@@ -298,7 +292,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #0000c2;
+  background-color: #bd0404;
   width: 120px;
   height: 30px;
   align-self: center;
