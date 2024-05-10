@@ -32,6 +32,7 @@ body {
   height: var(--tamanho-header);
   border-bottom: 5px solid #bd0404;
   background-color: black;
+  height: 80px;
 }
 
 .header .container {
@@ -66,8 +67,8 @@ body {
 
 .titulo {
   color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
+  width: 1000px;
+  font-weight: 700;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
   font-style: italic;
   color: red;
@@ -110,6 +111,7 @@ body {
 .banner .botao {
   padding: 5px;
   height: 40px;
+  width: 180px;
   background-color: rgb(218, 0, 0);
   color: white;
   font-size: 20px;
@@ -120,7 +122,8 @@ body {
   margin-left: 12px;
   position: absolute;
   left: 88px;
-  bottom: 310px;
+  top: 435px;
+  /* bottom: 50px; */
 }
 
 
