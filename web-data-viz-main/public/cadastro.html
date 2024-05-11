@@ -111,12 +111,8 @@
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     // var empresaVar = listaEmpresas.value
-    if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-      // empresaVar == ""
+    
+    if (nomeVar == "" && emailVar == "" && senhaVar == "" && confirmacaoSenhaVar == ""// empresaVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML = "Preencha todos os campos!";
@@ -125,7 +121,33 @@
         }, 5000);
       finalizarAguardar();
       return false;
-    } else {
+    } 
+    
+    if(nomeVar <= 1){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "Necessário que o nome tenha mais de um caractere!";
+      return false;
+    }
+
+    if(!emailVar.includes("@") && !emailVar.includes(".")){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "Digite um email válido! <br> Verifique se usou @ e .";
+      return false;
+    }
+
+    if(senhaVar <= 6){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "Senha deve ter mais de 6 caracteres!";
+      return false;
+    }
+
+    if(confirmacaoSenhaVar != senhaVar){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "Senha deve ser igual em todos os campos 'senha'!";
+      return false;
+    }
+    
+    else {
       setInterval(sumirMensagem, 5000);
     }
 
