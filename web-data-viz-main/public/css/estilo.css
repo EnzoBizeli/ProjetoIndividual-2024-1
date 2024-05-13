@@ -65,7 +65,7 @@ body {
 }
 
 .titulo {
-  font-weight: 700;
+  font-weight: 200;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
   font-style: italic;
   color: red;
@@ -108,7 +108,7 @@ body {
 .banner .botao {
   padding: 5px;
   height: 40px;
-  width: 180px;
+  width: 200px;
   background-color: rgb(218, 0, 0);
   font-size: 20px;
   font-weight: bold;
@@ -116,8 +116,8 @@ body {
   cursor: pointer;
   margin-left: 12px;
   position: absolute;
-  left: 88px;
-  top: 465px;
+  left: 86px;
+  top: 475px;
 }
 
 
@@ -175,8 +175,8 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #011f5f;
-  border-top: 5px solid #00277c;
+  background-color: #9e0000;
+  border-top: 5px solid #870000;
   height: 80px;
   color: #fff;
   display: flex;
@@ -305,8 +305,8 @@ body {
 }
 
 .loading-div img {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
 }
 
 #div_erros_login {
