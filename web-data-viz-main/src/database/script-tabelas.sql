@@ -6,24 +6,22 @@
 comandos para mysql server
 */
 
-CREATE DATABASE aquatech;
+CREATE DATABASE ProjetoIndividual;
+USE ProjetoIndividual;
 
-USE aquatech;
-
-CREATE TABLE empresa (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50),
-	cnpj CHAR(14)
-);
+-- CREATE TABLE empresa (
+-- 	id INT PRIMARY KEY AUTO_INCREMENT,
+-- 	razao_social VARCHAR(50),
+-- 	cnpj CHAR(14)
+-- );
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
-);
+	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(45),
+	email VARCHAR(45),
+	senha VARCHAR(45)
+	confirmacaoSenha VARCHAR(45)
+	);
 
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
