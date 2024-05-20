@@ -6,21 +6,20 @@
 comandos para mysql server
 */
 
-create database ProjetoIndividual;
-use ProjetoIndividual;
+create database projetoindividual;
+use projetoindividual;
 
 create table usuario (
 idUsuario int primary key auto_increment,
 nome varchar(45),
 email varchar(45),
-senha varchar(45),
-confirmacao_senha varchar(45)
+senha varchar(45)
 );
 
 create table quiz (
 tentativa int primary key auto_increment,
-fkUsuario int, 
+fk_usuario int, 
 pontuacao int,
-constraint fkQuizUsuario foreign key (fkUsuario)
+constraint fkQuizUsuario foreign key (fk_usuario)
 	references usuario(idUsuario)
 );
