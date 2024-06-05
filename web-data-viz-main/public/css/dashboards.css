@@ -123,13 +123,19 @@ body {
   background-color: #212124;
   height: 100vh;
   overflow: auto;
+  background-image: url(../css/wallpaper-dash.jpg);
+  /* background-position: top; */
+  background-size: contain;
+  /* background-repeat: no-repeat; */
 }
 
 .quadro{
   display: flex;
-  width: 80%;
-  height: 100%;
+  position: relative;
+  width: 100%;
+  height: 0;
   margin: auto;
+  justify-content: space-around;
 }
 
 .cards {
@@ -140,12 +146,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
   color: white;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;  
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3); 
+}
+
+.card1{
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/501/29/303/angeles-basketball-clippers-los-wallpaper-preview.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 185px;
+  margin-left: 100px;
+}
+
+.card2{
+  background-image: url('https://wallpapers.com/images/hd/nba-logo-ul8ghzqyxry4nxv2.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 185px;
+  margin-right: 100px;
 }
 
 .area-parametros-alerta {
@@ -209,16 +235,6 @@ body {
   background-color: #9ccc65;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 450px;
-  width: 100%;
-  align-items: center;
-  color: white;
-}
-
 .card-aquario {
   margin: 2%;
   min-width: 40%;
@@ -257,15 +273,6 @@ body {
 
 .title-aquario {
   width: 100%;
-}
-
-
-.cards h1 {
-  font-size: 22px;
-  border-bottom: solid white 1px;
-  text-align: left;
-  font-weight: lighter;
-  margin: 20px;
 }
 
 .temperatura,
@@ -365,8 +372,8 @@ canvas {
   flex-direction: row;
   /* justify-content: end; */
   align-items: center;
-  border-bottom: 3px solid #bd0404;
-  background-color: #161618;
+  border-bottom: 4px solid #bd0404;
+  background-color: #111112;
 }
 
 .header-left a {
@@ -419,6 +426,7 @@ canvas {
   width: 10%;
   color: white;
   background-color: #bd0404;
+  border: 3px solid #bd0404;
   border-radius: 5px;
   text-align: center;
   padding: 1% 1%;
@@ -445,7 +453,7 @@ canvas {
 .btn-nav-white h3 {
   color: #e6005a;
   padding: 0;
-  margin: 0;;
+  margin: 0;
 }
 
 .btn-nav h3,
@@ -458,7 +466,8 @@ canvas {
   /* margin: auto; */
   padding: 0;
   width: 10%;
-  background-color: #bd0404;
+  background-color: #970606;
+  border: 3px solid #970606;
   color: rgb(255, 255, 255);
   border-radius: 5px;
   text-align: center;
