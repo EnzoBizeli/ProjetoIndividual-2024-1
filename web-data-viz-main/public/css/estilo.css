@@ -49,12 +49,13 @@ body {
 .header a {
   text-decoration: none;
   color: rgb(216, 0, 0);
-  font-weight: 300;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .agora {
-  font-weight: 650;
-  text-shadow: 1px 1px rgba(255, 70, 70, 0.674);
+  font-weight: 800;
+  text-shadow: 1px 1px rgb(255, 36, 36);
 }
 
 .navbar {
@@ -97,7 +98,7 @@ body {
 }
 
 .banner .teste .p-left {
-  width: 30%;
+  width: 25%;
   margin: 0;
   font-size: 36px;
   font-weight: bold;
@@ -133,7 +134,7 @@ body {
 
 .banner .botao1 {
   height: 40px;
-  width: 200px;
+  width: 150px;
   background-color: rgb(218, 0, 0);
   color: white;
   font-size: 20px;
@@ -188,14 +189,6 @@ body {
   justify-content: center;
 }
 
-.box img {
-  margin-top: -40px;
-  width: 800px;
-  border-radius: 3px;
-  margin-left: 120px;
-  margin-right: 100px;
-}
-
 .social .container .boxes {
   display: flex;
   justify-content: space-between;
@@ -208,11 +201,67 @@ body {
   color: white;
 }
 
-.box {
+.box1 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.box1 p{
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 650px;
+}
+
+.box1 h2{
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+}
+
+.box1 img {
+  margin-top: -40px;
+  width: 800px;
+  border-radius: 3px;
+  margin-left: 120px;
+  margin-right: 100px;
+  border: 3px solid #bd0404;
+  box-shadow: 1px 1px 3px 3px #bd0404;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box2 p{
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 650px;
+  margin-right: 5px;
+}
+
+.box2 h2{
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  margin-left: 100px;
+}
+
+.box2 img {
+  margin-top: -40px;
+  width: 600px;
+  border-radius: 3px;
+  margin-left: 120px;
+  margin-right: 100px;
+  margin-left: 230px;
+  border: 3px solid #bd0404;
+  box-shadow: 1px 1px 3px 3px #bd0404;
+}
+
 
 /* FOOTER */
 
