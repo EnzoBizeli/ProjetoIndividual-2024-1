@@ -51,6 +51,7 @@ body {
   color: rgb(216, 0, 0);
   font-weight: 700;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 15px;
 }
 
 .agora {
@@ -240,7 +241,7 @@ body {
   text-align: center;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 650px;
+  width: 660px;
   margin-right: 5px;
 }
 

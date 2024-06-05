@@ -53,19 +53,6 @@ img{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.botao2{
-    background-color: rgb(0, 81, 167);
-    border: none;
-    border-radius: 3.5px;
-    /* border: 2px solid black; */
-    font-weight: bold;
-    width: 120px;
-    height: 30px;
-    cursor: pointer;
-    color: whitesmoke;
-    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
-    margin-right: 30px;
-}
 
 .botao1{
     background-color: rgb(0, 81, 167);
@@ -85,7 +72,39 @@ img{
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5)
 }
 
+.botao2{
+    background-color: rgb(0, 81, 167);
+    border: none;
+    border-radius: 3.5px;
+    /* border: 2px solid black; */
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    color: whitesmoke;
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    margin-right: 30px;
+}
+
 .botao2:hover{
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5)
+}
+
+.botao3{
+    background-color: rgb(0, 81, 167);
+    border: none;
+    border-radius: 3.5px;
+    /* border: 2px solid black; */
+    font-weight: bold;
+    width: 130px;
+    height: 30px;
+    cursor: pointer;
+    color: whitesmoke;
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    margin-right: 10px;
+}
+
+.botao3:hover{
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5)
 }
 
