@@ -57,7 +57,7 @@
             </div>
 
             <div id="P6" class="perguntas">
-                <h2>6 - Quem é o maior jogador da NBA atualmente?</h2>
+                <h2>6 - Quem é o jogador mais alto da NBA atualmente?</h2>
                 <span><input type="radio" name="Q6" value="durant">A) Kevin Durant <br></span>
                 <span><input type="radio" name="Q6" value="davis">B) Anthony Davis <br></span>
                 <span><input type="radio" name="Q6" value="deandre">C) Deandre Jordan <br></span>
@@ -93,7 +93,7 @@
 
 
             <div id="P10" class="perguntas">
-                <h2>10 - Quem foi o MVP da temporada de 2024</h2>
+                <h2>10 - Quem foi o MVP da temporada de 2024?</h2>
                 <span><input type="radio" name="Q10" value="jokic" id="correto">A) Nikola Jokic <br></span>
                 <span><input type="radio" name="Q10" value="luka">B) Luka Doncic <br></span>
                 <span><input type="radio" name="Q10" value="shai">C) Shai Gilgeous-Alexander <br></span>
@@ -102,7 +102,7 @@
 
             <div class="espaçamento">
                 <a href="../dashboard/cards.html"><button class="botao1" onclick="voltar()">Voltar</button></a>
-                <button class="botao2" onclick="finalizar()">Finalizar Quiz!</button>
+                <button class="botao2" onclick="cadastrarQtdAcerto_quiz_nba()">Finalizar Quiz!</button>
                 <button class="botao3" onclick="window.location.reload()">Limpar Respostas</button>
             </div>
 
@@ -119,7 +119,7 @@
 <script>
     var respostas_certas = ['boston', 'west', 'kareem', 'jackson', 'russell', 'victor', '100', 'hakeem', 'wilt', 'jokic']
 
-    function finalizar(){
+    function cadastrarQtdAcerto_quiz_nba(){
 
         var questao1 = document.getElementsByName('Q1');
         var respostas_selecionadas = '';
@@ -279,5 +279,25 @@
         else if (qtdAcertos == 10){
             div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10!`
         }
+    
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch("/quiz_nba/cadastrarQtdAcerto_quiz_nba", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idUsuarioServer: idUsuario,
+        qtdAcertosServer: qtdAcertos
+      }),
+    }).then((resposta)=>{
+        if(resposta.status == 200){
+            alert('Quiz_NBA Cadastrado com Sucesso!')
+        } else {
+            alert('Erro ao cadastrar!')
+        }
+      });
+    
     }
 </script>

@@ -20,6 +20,7 @@ var usuarioRouter = require("./src/routes/usuarios");
 var avisosRouter = require("./src/routes/avisos");
 var medidasRouter = require("./src/routes/medidas");
 var aquariosRouter = require("./src/routes/aquarios");
+var quiz_nbaRouter = require("./src/routes/quiz_nba");
 // var empresasRouter = require("./src/routes/empresas");
 
 app.use(express.json());
@@ -33,6 +34,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/avisos", avisosRouter);
 app.use("/medidas", medidasRouter);
 app.use("/aquarios", aquariosRouter);
+app.use("/quiz_nba", quiz_nbaRouter);
 // app.use("/empresas", empresasRouter);
 
 app.listen(PORTA_APP, function () {
