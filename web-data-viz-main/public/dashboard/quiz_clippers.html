@@ -105,7 +105,7 @@
 
             <div class="espaçamento">
                 <a href="../dashboard/cards.html"><button class="botao1" onclick="voltar()">Voltar</button></a>
-                <button class="botao2" onclick="finalizar()">Finalizar Quiz</button>
+                <button class="botao2" onclick="cadastrarQtdAcerto_quiz_clippers()">Finalizar Quiz</button>
                 <button class="botao3" onclick="window.location.reload()">Limpar Respostas</button>
             </div>
 
@@ -122,7 +122,7 @@
 <script>
     var respostas_certas = ['trio3', 'crypto', 'bob', 'buffalo', '0.titulo', 'griffin', 'lue', 'lakers', '1.conferencia', 'jamal']
 
-    function finalizar(){
+    function cadastrarQtdAcerto_quiz_clippers(){
 
         var questao1 = document.getElementsByName('Q1');
         var respostas_selecionadas = '';
@@ -282,5 +282,26 @@
         else if (qtdAcertos == 10){
             div_mens.innerHTML = `COMO ASSIM VOCÊ ACERTOU <b>TUDO</b>! TEMOS UM MESTRE SOBRE OS CLIPPERS ANDANDO ENTRE NÓS!`
         }
+
+
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch("/quiz_clippers/cadastrarQtdAcerto_quiz_clippers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idUsuarioServer: idUsuario,
+        qtdAcertosServer: qtdAcertos
+      }),
+    }).then((resposta)=>{
+        if(resposta.status == 200){
+            // alert('Quiz_NBA Cadastrado com Sucesso!')
+        } else {
+            alert('Erro ao cadastrar!')
+        }
+      });
+
     }
 </script>

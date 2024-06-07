@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+padding: 0;
+}
+
+body{
+background-image: linear-gradient(to bottom, #8a0000, #c10000, #8a0000);
+font-family: monospace;
+}
+
+header h1{
+text-align: center;
+font-size: 30px;
+}
+
+table {
+    border: 1px #1F618D solid;
+    font-size:25px; 
+    margin-left: 130px;
+    margin: auto;
+}
+
+tr {
+    border: 1px #1F618D solid;
+}
+
+td {
+    border: 1.5px solid rgb(189, 0, 0);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.center {
+    background-color: rgb(189, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+    border: 0px;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container{
+    width: 1100px;
+    margin: auto;
+}
+
+#div_game{
+    background-color: #ffffff;
+    border: 2px solid black;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+}
+
+#div_questions{
+background-color:#85C1E9;
+width: 700px;
+margin: auto;
+}
+
+.button1{
+    margin: auto;
+    display: inline-block;
+    background-color: rgb(189, 0, 0);
+}
+
+.button2{
+    margin: auto;
+    display: inline-block;
+    background-color: rgb(142, 0, 0);
+}
+
+#button_verify{
+    width: 100px;
+    margin: auto;
+}
+
+#input_answer{
+    width: 100px;
+    margin: auto;
+}
+
+.deadCell{
+    background-color: rgb(189, 0, 0);
+}
+
+.availableCell{
+    background-color: #ffffff;
+}
+
+/* footer{
+    height: 80px;
+    background-image: linear-gradient(to bottom, rgb(32, 32, 32), #bd0404, rgb(32, 32, 32));    border-top: 3px solid black;
+    color: #ffffff;
+    font-size: 15px; 
+    margin-bottom: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+footer p{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600; 
+} */
+
+#div_information{
+    width: 500px;
+    margin: auto;
+    background-color: rgb(200, 0, 0);
+    font-size: 20px;
+    /* border: 3px solid black; */
+}
+
+#div_information p{
+    display: flex;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#div_information h2{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#div_verifiedAnswer{
+    width: 500px;
+    height: 70px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    vertical-align:center;
+    margin-bottom: 20px;
+}
+
+.correctAnswer{
+    background-color: #58D68D;
+    color: #196F3D;
+    border:1px #196F3D solid;
+}
+
+.wrongAnswer{
+    background-color: #EC7063  ;
+    color: #7B241C;
+    border:1px #7B241C solid;
+
+}

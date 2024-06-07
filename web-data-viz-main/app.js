@@ -21,6 +21,8 @@ var avisosRouter = require("./src/routes/avisos");
 var medidasRouter = require("./src/routes/medidas");
 var aquariosRouter = require("./src/routes/aquarios");
 var quiz_nbaRouter = require("./src/routes/quiz_nba");
+var quiz_clippersRouter = require("./src/routes/quiz_clippers");
+var cruzadinhaRouter = require("./src/routes/cruzadinha");
 // var empresasRouter = require("./src/routes/empresas");
 
 app.use(express.json());
@@ -35,6 +37,9 @@ app.use("/avisos", avisosRouter);
 app.use("/medidas", medidasRouter);
 app.use("/aquarios", aquariosRouter);
 app.use("/quiz_nba", quiz_nbaRouter);
+app.use("/quiz_clippers", quiz_clippersRouter);
+app.use("/cruzadinha", cruzadinhaRouter);
+
 // app.use("/empresas", empresasRouter);
 
 app.listen(PORTA_APP, function () {

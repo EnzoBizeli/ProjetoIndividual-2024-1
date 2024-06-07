@@ -261,23 +261,8 @@
         } else {  
         }
 
-        if (qtdAcertos <= 3){
+        if (qtdAcertos <= 10){
             div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10.`
-        }
-        else if (qtdAcertos <= 5){
-            div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10.`
-        }
-        else if (qtdAcertos == 6){
-            div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10.`
-        }
-        else if (qtdAcertos <= 8){
-            div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10!`
-        }
-        else if (qtdAcertos == 9){
-            div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10!`
-        }
-        else if (qtdAcertos == 10){
-            div_mens.innerHTML = `Você acertou ${qtdAcertos} de 10!`
         }
     
         var idUsuario = sessionStorage.ID_USUARIO;
@@ -293,7 +278,7 @@
       }),
     }).then((resposta)=>{
         if(resposta.status == 200){
-            alert('Quiz_NBA Cadastrado com Sucesso!')
+            // alert('Quiz_NBA Cadastrado com Sucesso!')
         } else {
             alert('Erro ao cadastrar!')
         }
