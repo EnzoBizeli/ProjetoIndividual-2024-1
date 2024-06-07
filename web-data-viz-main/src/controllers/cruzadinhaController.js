@@ -9,7 +9,6 @@ function cadastrar_pontos_cruzadinha(req, res){
     })
 }
 
-
 module.exports = {
     cadastrar_pontos_cruzadinha
 }

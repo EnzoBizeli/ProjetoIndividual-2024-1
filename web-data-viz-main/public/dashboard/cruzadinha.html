@@ -19,7 +19,7 @@
                 <center>
                     <button class="button1" id="bt_start" onclick="start()">Começar o Jogo</button>
                     <!-- <a href="../dashboard/cards.html"><button class="button1" onclick="voltar()">Voltar</button></a> -->
-                    <button class="button1" style="display: none" id="bt_destroyGame" onclick="cadastrar_pontos_cruzadinha()">Encerrar o Jogo</button>
+                    <button class="button1" style="display: none" id="bt_destroyGame" onclick="destroyGrid()">Encerrar o Jogo</button>
                 </center>
             </div>
             <br>
@@ -92,6 +92,8 @@
         75, 76, 77, 78];
     
     var firstIndex= [38, 110, 112, 130, 135, 171, 174, 178, 74];
+
+    var pontuacao = 0
     
     var word = {
     
@@ -105,8 +107,10 @@
     
                     findCell.innerHTML = word.word1.letter[i];
                     console.log(word.word1.letter[i]);
-                }
-                cell_38.innerHTML = '<span style="color: red; font-size:10px">1_2</span>L';
+                    
+                    }
+                    cell_38.innerHTML = '<span style="color: red; font-size:10px">1_2</span>L';
+                    pontuacao++
             }
         },
         word2: {
@@ -118,8 +122,10 @@
     
                     findCell.innerHTML = word.word2.letter[i];
                     console.log(word.word2.letter[i]);
-                }
-                cell_38.innerHTML = '<span style="color: red; font-size:10px">1_2</span>L';
+
+                    }
+                    cell_38.innerHTML = '<span style="color: red; font-size:10px">1_2</span>L';
+                    pontuacao++
     
             }
         },
@@ -132,8 +138,10 @@
     
                     findCell.innerHTML = word.word3.letter[i];   
                     console.log(word.word3.letter[i]);
-                }
-                cell_110.innerHTML = '<span style="color: red; font-size:10px">3</span>R';
+
+                    }
+                    cell_110.innerHTML = '<span style="color: red; font-size:10px">3</span>R';
+                    pontuacao++
             }
         },
         word4: {
@@ -145,8 +153,10 @@
     
                     findCell.innerHTML = word.word4.letter[i];
                     console.log(word.word4.letter[i]);
-                }
-                cell_112.innerHTML = '<span style="color: red; font-size:10px">4</span>S';            
+
+                    }
+                    cell_112.innerHTML = '<span style="color: red; font-size:10px">4</span>S';            
+                    pontuacao++
             }
         },
         word5: {
@@ -158,8 +168,10 @@
     
                     findCell.innerHTML = word.word5.letter[i];
                     console.log(word.word5.letter[i]);
-                }
-                cell_130.innerHTML = '<span style="color: red; font-size:10px">5</span>H';
+
+                    }
+                    cell_130.innerHTML = '<span style="color: red; font-size:10px">5</span>H';
+                    pontuacao++
             }
         },
         word6: {
@@ -171,8 +183,10 @@
     
                     findCell.innerHTML = word.word6.letter[i];
                     console.log(word.word6.letter[i]);
-                }
-                cell_135.innerHTML= '<span style="color: red; font-size:10px">6</span>M';
+
+                    }
+                    cell_135.innerHTML= '<span style="color: red; font-size:10px">6</span>M';
+                    pontuacao++
             }
         },
         word7: {
@@ -184,8 +198,10 @@
     
                     findCell.innerHTML = word.word7.letter[i];
                     console.log(word.word7.letter[i]);
-                }
-                cell_171.innerHTML = '<span style="color: red; font-size:10px">7</span>C';
+
+                    }
+                    cell_171.innerHTML = '<span style="color: red; font-size:10px">7</span>C';
+                    pontuacao++
             }
         },
         word8: {
@@ -197,8 +213,10 @@
     
                     findCell.innerHTML = word.word8.letter[i];
                     console.log(word.word8.letter[i]);
-                }
-                cell_174.innerHTML = '<span style="color: red; font-size:10px">8</span>P';
+
+                    }
+                    cell_174.innerHTML = '<span style="color: red; font-size:10px">8</span>P';
+                    pontuacao++
             }
         },
         word9: {
@@ -210,8 +228,10 @@
     
                     findCell.innerHTML = word.word9.letter[i];
                     console.log(word.word9.letter[i]);
-                }
-                cell_178.innerHTML = '<span style="color: red; font-size:10px">9</span>S';
+
+                    }
+                    cell_178.innerHTML = '<span style="color: red; font-size:10px">9</span>S';
+                    pontuacao++
             }
         },
         word10: {
@@ -223,8 +243,10 @@
     
                     findCell.innerHTML = word.word10.letter[i];
                     console.log(word.word10.letter[i]);
-                }
-                cell_74.innerHTML = '<span style="color: red; font-size:10px">10</span>K';
+
+                    }
+                    cell_74.innerHTML = '<span style="color: red; font-size:10px">10</span>K';
+                    pontuacao++
             }
         }
         // word11: {
@@ -328,11 +350,13 @@
     
     }
     
-    function cadastrar_pontos_cruzadinha() {
+    function destroyGrid() {
         bt_start.style.display = 'block';
         bt_destroyGame.style.display = 'none';
         div_questions.style.display = 'none';
-    
+        var idUsuario = sessionStorage.ID_USUARIO; 
+        // var pontuacao = sessionStorage.PONTUACAO; 
+
         document.querySelector('#div_canvasCruzada').innerHTML = '';
         pontuation();
 
@@ -343,11 +367,11 @@
       },
       body: JSON.stringify({
         idUsuarioServer: idUsuario,
-        pontuacaoServer: pontuacao
+        pontuacaoServer: pontuacao,
       }),
     }).then((resposta)=>{
         if(resposta.status == 200){
-            // alert('Quiz_NBA Cadastrado com Sucesso!')
+            alert('Cruzadinha Cadastrado com Sucesso!')
         } else {
             alert('Erro ao cadastrar!')
         }
@@ -407,9 +431,9 @@
             //     word.word16.write();
     
                 setTimeout(function () {
-                    cadastrar_pontos_cruzadinha();
+                    destroyGrid();
                 }, 1500);
-            }
+            }   
     
     
     }
