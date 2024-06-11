@@ -54,7 +54,7 @@ button{
 }
 
 #div_game{
-    background-color: #ffffff;
+    background-color: #fff4b8;
     border: 2px solid black;
     margin: auto;
     width: 800px;
@@ -94,7 +94,7 @@ margin: auto;
 }
 
 .availableCell{
-    background-color: #ffffff;
+    background-color: #fcf7d9;
 }
 
 /* footer{

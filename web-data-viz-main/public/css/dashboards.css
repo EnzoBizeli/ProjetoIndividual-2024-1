@@ -364,8 +364,9 @@ a{
 }
 
 canvas {
-  width: 100% !important;
-  height: 100% !important;
+  display: none;
+  width: 200px;
+  height: 100px;
 }
 
 /* PAGINA DOS GRÁFICOS 2023 */
@@ -497,4 +498,112 @@ canvas {
   width: 80px;
   height: 80px;
   margin-right: 600px;
+}
+
+
+.StyleGraficos{
+  position: absolute;
+  width: 100%;
+  /* align-items: baseline; */
+  justify-content: center;
+}
+
+.styleGrafico{
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  background-color: #fffce1;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+.container-menu{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#checkbox-menu{
+  position: absolute;
+  opacity: 0;
+}
+
+label{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+label span{
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  border-radius: 30px;
+  background: #bd0404;
+  transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1){
+  top: 0;
+}
+
+label span:nth-child(2){
+  top: 8px;
+}
+
+label span:nth-child(3){
+  top: 16px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1){
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+  opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+  transform: rotate(45deg);
+  top:8px;
+}
+
+.menuHamb{
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  background-color: #212124;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.menuHamb h3{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
 }
