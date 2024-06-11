@@ -17,7 +17,7 @@ function obterDadosQuizNBA(req, res) {
 
 
     quiz_nbaModel.obterDadosQuizNBA(idUsuario).then((resultado) => {
-        console.log(resultado + "obterDadosQuizNBA\n\n")
+        console.log(Object.keys(resultado) + "obterDadosQuizNBA\n\n")
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
