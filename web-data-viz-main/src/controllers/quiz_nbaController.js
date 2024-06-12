@@ -10,6 +10,9 @@ function cadastrarQtdAcerto_quiz_nba(req, res) {
     })
 }
 
+
+
+
 function obterDadosQuizNBA(req, res) {
     var idUsuario = req.body.idUsuario
 
@@ -26,6 +29,7 @@ function obterDadosQuizNBA(req, res) {
     })
 
 }
+
 
 
 module.exports = {

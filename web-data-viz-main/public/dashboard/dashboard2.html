@@ -82,13 +82,9 @@
 
         <div class="dash">
             <div class="menuHamb">
-                <h3 class="opMenu">Gráfico 1</h3>
-                
-                <h3 class="opMenu">Gráfico 2</a></h3>
-                
-                <a href="">
+                <h3 class="opMenu-agora">Gráfico 1</h3>
+                <h3 class="opMenu">Gráfico 2</h3>
                 <h3 class="opMenu">Gráfico 3</h3>
-                </a>
             </div>
             <div id="titleDash">
                 <h1>Este gráfico exibe suas últimas 10 tentativas no quiz</h1>
@@ -98,7 +94,6 @@
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
             </div>
             <div id="graficos" class="StyleGraficos">
-                <h1>Quiz NBA</h1>
                 <div id="grafico1" class="display-block styleGrafico">
                     <canvas id="myChartCanvas1" width="400px" height="200px"></canvas>
                     <div class="label-captura">
@@ -139,17 +134,17 @@ function menuHamb() {
 
 function obterDadosGraficos() {
 
-    obterDadosGrafico1(1)
-    // obterDadosGrafico2(2)
+    // obterDadosGrafico1(1)
+    obterDadosGrafico2(2)
     // obterDadosGrafico3(3)
 }
 
-        function obterDadosGrafico1() {
+        function obterDadosGrafico2() {
             if (proximaAtualizacao != undefined) {
                 clearTimeout(proximaAtualizacao);
             }
 
-            fetch(`/quiz_nba/obterDadosQuizNBA`, {
+            fetch(`/quiz_clippers/obterDadosQuizClippers`, {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json"
@@ -166,7 +161,7 @@ function obterDadosGraficos() {
                     });
                 } else if (response.status == 204) {
                     alert("Você ainda não realizou uma tentativa no quiz!")
-                    setTimeout(() => { window.location.href = './quiz_nba.html' }, 2000);
+                    setTimeout(() => { window.location.href = './quiz_clippers.html' }, 2000);
                 } else {
                     console.error('Nenhum dado encontrado ou erro na API');
                 }

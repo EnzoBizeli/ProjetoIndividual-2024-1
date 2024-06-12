@@ -8,4 +8,14 @@ router.post("/cadastrar_pontos_cruzadinha", function(req, res){
     cruzadinhaController.cadastrar_pontos_cruzadinha(req, res);
 })
 
+
+
+router.post("/obterDadosCruzadinha", function (req, res) {
+    console.log("rota acessada")
+
+    console.log(req.body);
+    cruzadinhaController.obterDadosCruzadinha(req, res);
+
+})
+
 module.exports = router;

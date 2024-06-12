@@ -8,4 +8,13 @@ router.post("/cadastrarQtdAcerto_quiz_clippers", function(req, res){
     quiz_clippersController.cadastrarQtdAcerto_quiz_clippers(req, res);
 })
 
+
+router.post("/obterDadosQuizClippers", function (req, res) {
+    console.log("rota acessada")
+
+    console.log(req.body);
+    quiz_nbaController.obterDadosQuizClippers(req, res);
+
+})
+
 module.exports = router;
