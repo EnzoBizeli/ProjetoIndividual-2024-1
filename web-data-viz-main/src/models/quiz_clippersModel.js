@@ -9,7 +9,7 @@ function cadastrarQtdAcerto_quiz_clippers(idUsuario, qtdAcertos){
 
 
 function obterDadosQuizClippers (idUsuario){
-    let instrucaoSql = `SELECT nome, quiz_nba.qtdAcertos FROM quiz_clippers
+    let instrucaoSql = `SELECT nome, quiz_clippers.qtdAcertos FROM quiz_clippers
 	                        JOIN usuario 
                             ON idUsuario = fk_usuario
                             WHERE idUsuario = ${idUsuario};`

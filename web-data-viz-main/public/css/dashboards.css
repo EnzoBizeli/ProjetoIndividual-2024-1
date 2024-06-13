@@ -497,11 +497,6 @@ canvas {
   margin-right: 600px;
 }
 
-.StyleGraficos h1{
-  display: flex;
-  justify-content: center;
-  
-}
 
 .StyleGraficos{
   position: absolute;
@@ -509,22 +504,34 @@ canvas {
   /* align-items: baseline; */
   justify-content: center;
   top: 120px;
-}
+  }
+  
+  .styleGrafico{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-color: #fffce1;
+    }
 
-.styleGrafico{
-  position: relative;
-  width: 800px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  background-color: #fffce1;
-}
-
-#myChartCanvas1{
-  border: 5px solid black;  
-}
-
+    .StyleGraficos p{
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 35px;
+      font-weight: 600;
+      color: #bd0404;
+    }
+    
+    #myChartCanvas1{
+      border: 5px solid black;  
+      }
+      
 *{
   margin:0;
   padding:0;
@@ -536,10 +543,12 @@ html, body{
 }
 
 .container-menu{
+  display: relative;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  left: 20px  ;
 }
 
 #checkbox-menu{
@@ -553,7 +562,7 @@ label{
   display: block;
   height: 22px;
   width: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 label span{
@@ -604,6 +613,7 @@ label span:nth-child(3){
   justify-content: center;
   overflow: hidden;
   transition: all 1s ease-in-out;
+  z-index: 3;
 }
 
 .menuHamb h3{
@@ -639,4 +649,5 @@ label span:nth-child(3){
   border-radius: 5px;
   padding: 15px 20px;
   color: #e6005a;
+  transition: all 0.5s ease-in-out;
 }

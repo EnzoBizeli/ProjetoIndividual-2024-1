@@ -13,7 +13,7 @@ router.post("/obterDadosQuizClippers", function (req, res) {
     console.log("rota acessada")
 
     console.log(req.body);
-    quiz_nbaController.obterDadosQuizClippers(req, res);
+    quiz_clippersController.obterDadosQuizClippers(req, res);
 
 })
 

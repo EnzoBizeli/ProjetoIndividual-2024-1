@@ -82,9 +82,9 @@
 
         <div class="dash">
             <div class="menuHamb">
-                <h3 class="opMenu-agora">Gráfico 1</h3>
-                <h3 class="opMenu">Gráfico 2</h3>
-                <h3 class="opMenu">Gráfico 3</h3>
+                <h3 class="opMenu" onclick="rota(1)">Gráfico 1</h3>
+                <h3 class="opMenu" onclick="rota(2)">Gráfico 2</h3>
+                <h3 class="opMenu opMenu-agora" onclick="rota(3)">Gráfico 3</h3>
             </div>
             <div id="titleDash">
                 <h1>Este gráfico exibe suas últimas 10 tentativas no quiz</h1>
@@ -94,6 +94,7 @@
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
             </div>
             <div id="graficos" class="StyleGraficos">
+                <p>Cruzadinha</p>
                 <div id="grafico1" class="display-block styleGrafico">
                     <canvas id="myChartCanvas1" width="400px" height="200px"></canvas>
                     <div class="label-captura">
@@ -160,7 +161,7 @@ function obterDadosGraficos() {
                         plotarGrafico(resposta);
                     });
                 } else if (response.status == 204) {
-                    alert("Você ainda não realizou uma tentativa no quiz!")
+                    alert("Você ainda não realizou uma tentativa no quiz, jogue uma vez!")
                     setTimeout(() => { window.location.href = './cruzadinha.html' }, 2000);
                 } else {
                     console.error('Nenhum dado encontrado ou erro na API');
@@ -183,7 +184,7 @@ function obterDadosGraficos() {
             // Criando estrutura para plotar gráfico - labels e dados
             // Rótulo que sera inserido no gráfico, no caso indíce da tentativa + 1;
             const labels = dadosRecebidos.map((registro, index) => `Tentativa:${index + 1}`);
-            const dataPoints = dadosRecebidos.map(registro => registro.qtdAcertos);
+            const dataPoints = dadosRecebidos.map(registro => registro.pontuacao);
 
             console.log('----------------------------------------------');
             console.log('Dados recebidos:');
@@ -239,6 +240,20 @@ function obterDadosGraficos() {
             new Chart(ctx, config);
         }
     </script>
+
+<script>
+    function rota(grafico){
+        if (grafico == 1){
+            window.location.href = './dashboard.html'
+        } 
+        else if (grafico == 2){
+            window.location.href = './dashboard2.html'
+        }
+        else if (grafico == 3){
+            window.location.href = './dashboard3.html'
+        }
+    }
+</script>
 </body>
 
 </html>
